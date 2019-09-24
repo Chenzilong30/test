@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style type="text/css">
+		table, td, th{
+			border: 1px solid #999;
+			border-collapse: collapse;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=init;
+		function init(){
+			var tbl=document.getElementById("tbl");
+			var trs=document.getElementsByTagName("tr");
+			var oldGB; 
+			for(n in trs){
+				if(n%2==0){ 
+				trs[n].onmouseover=function(){
+					oldGB=this.style.background;
+					this.style.background="green";
+				}
+				trs[n].onmouseout=function(){
+					this.style.background=oldGB;
+				}
+			}
+				else{
+					trs[n].onmouseover=function(){
+					oldGB=this.style.background;
+						this.style.background="red";
+				}
+				trs[n].onmouseout=function(){
+					this.style.background=oldGB;
+				}
+				}
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	<table id="tbl" width="300px" height="200px">
+		<thead>
+			<td align="center">学号</td>
+			<td align="center">姓名</td>
+			<td align="center">年龄</td>
+		</thead>
+		<tr>
+			<td align="center">1111</td>
+			<td align="center">张三</td>
+			<td align="center">20</td>
+		</tr>
+		<tr>
+			<td align="center">1112</td>
+			<td align="center">李四</td>
+			<td align="center">20</td>
+		</tr>
+		<tr>
+			<td align="center">1113</td>
+			<td align="center">王五</td>
+			<td align="center">20</td>
+		</tr>
+		<tr>
+			<td align="center">1114</td>
+			<td align="center">大狗</td>
+			<td align="center">20</td>
+		</tr>
+		<tr>
+			<td align="center">1115</td>
+			<td align="center">小猪</td>
+			<td align="center">20</td>
+		</tr>
+	</table>
+	<a href="JS5.html">登陆界面(26-6)</a>
+</body>
+</html>
